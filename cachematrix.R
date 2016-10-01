@@ -1,7 +1,7 @@
 ## These two functions cache and solve the inverse of a matrix. The first
 ## function, makeCacheMatrix, creates a list of functions useful for solving
 ## the inverse. The second function, cacheSolve, will solve the matrix from
-## the list created from makeCacheMatrix.
+## the list created from makeCacheMatrix
 
 ## This function will cache the matrix and return a list containing functions
 ## which will be used when solving for the inverse. These functions are:
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
         inv <-- NULL
     }
     get <- function() x
-    setinverse <- function(inverse) inv <<- solve
+    setinverse <- function(solve) inv <<- solve
     getinverse <- function() inv
     list(set = set, get = get,
          setinverse = setinverse,
